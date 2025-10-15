@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 @Entity
-@Data
+@Data//for lombok and inbuilt methods for getter setter of the here, product class
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
