@@ -3,6 +3,8 @@ package com.e_com.ecom.Controller;
 import com.e_com.ecom.Model.Product;
 import com.e_com.ecom.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,8 +20,8 @@ public class ProductController {
         return "Heloo People";//push
     }
     @GetMapping("/products")
-    public List<Product> getAllProducts(){
-        return service.getAllProducts();
+    public ResponseEntity<List<Product>> getAllProducts(){
+        return new ResponseEntity<>(service.getAllProducts(), HttpStatus.OK);
 
     }
     @GetMapping("product/{id}")
