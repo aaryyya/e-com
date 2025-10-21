@@ -24,8 +24,8 @@ public class Product {
     private String category;
 //    @JsonFormat(shape=JsonFormat.Shape.STRING,pattern="dd-MM-yy")//this commented as it was handled in changed ui ecom-3
     private Date releaseDate;
-    private boolean available;
-    private int quantity;
+    private boolean productAvailable;//changed to prodAvi from available for changes in frontend error solving
+    private int stockQuantity;//changed from quantity to <-
 //what things do image poses:
 //    1name 2type 3data
 // forms of image not all types of images r supported
