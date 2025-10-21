@@ -25,7 +25,7 @@ public class Product {
     private String brand;
     private BigDecimal price;
     private String category;
-    @JsonFormat(shape=JsonFormat.Shape.STRING,pattern="dd-MM-yy")
+//    @JsonFormat(shape=JsonFormat.Shape.STRING,pattern="dd-MM-yy")//this commented as it was handled in changed ui ecom-3
     private Date releaseDate;
     private boolean available;
     private int quantity;
