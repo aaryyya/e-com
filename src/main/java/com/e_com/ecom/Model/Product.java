@@ -1,10 +1,7 @@
 package com.e_com.ecom.Model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Generated;
@@ -29,6 +26,17 @@ public class Product {
     private Date releaseDate;
     private boolean available;
     private int quantity;
+//what things do image poses:
+//    1name 2type 3data
+// forms of image not all types of images r supported
+    private String imageName;
+    private String imageType;
+    @Lob//by persistence
+    private byte[] imageData;//store in large object format if u want to store in the format of byte array
+    // we are storing in byte array coz we r storing it in our db and not on cloud as we will need to signup n stuff
+    // it isnt ideal but is for learning purpose only(storage in db)
+//    we can also include url for image data
+
 
 
 }
