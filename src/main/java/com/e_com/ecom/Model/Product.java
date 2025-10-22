@@ -33,6 +33,9 @@ public class Product {
     private String imageType;
     @Lob//by persistence
     private byte[] imageData;//store in large object format if u want to store in the format of byte array
+
+//    public void setImageDate(byte[] bytes) {
+//    }
     // we are storing in byte array coz we r storing it in our db and not on cloud as we will need to signup n stuff
     // it isnt ideal but is for learning purpose only(storage in db)
 //    we can also include url for image data
